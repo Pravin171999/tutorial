@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class PalindromeNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner num = new Scanner(System.in);
+
+		System.out.print("Enter the Number : ");
+		int x = num.nextInt();
+
+		int rev=0;
+		for (int i=x; i>0 ; i/=10 )
+		{
+			rev = rev *10 + i%10;
+		}
+
+		if (x==rev)
+		{
+			System.out.println(x+" is Palindrome Number");
+		}
+		else
+		{
+			System.out.println(x+" is Not Palindrome Number");
+		}
+	}
+}
