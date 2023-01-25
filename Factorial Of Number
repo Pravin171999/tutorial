@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class FactorialOfNumber 
+{
+	public static void main(String[] args) 
+	{    Scanner sc = new Scanner(System.in);
+
+		System.out.println("start");
+		 int start = sc.nextInt();
+
+		 System.out.println("end");
+		 int end = sc.nextInt();
+
+		 for(int j=start; j<=end; j++)
+		{
+		 int fact=1;
+		 for(int i=j; i>0; i--)
+		{
+			fact=fact*i;
+		}
+		System.out.println("Factorial of "+j+"="+fact);
+		}
+	}
+}
