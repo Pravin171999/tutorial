@@ -1,0 +1,30 @@
+num=9
+sqr=81
+sum=9
+sum=num
+
+import java.util.Scanner;
+class Neon_Number 
+{
+    
+	public static void main(String[] args) 
+	{   Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number");
+		 long num=sc.nextLong();
+		 long sum=0;
+		 long sqr=num*num;
+		 for(long i=sqr; i!=0; i/=10){
+			long rem=i%10;
+			sum=sum+rem;
+
+		 }
+		 if(num==sum)
+		{
+			System.out.print("It is Neon Number");
+		}
+		else
+		{
+			System.out.print("It is Not Neon Number");
+		}
+	}
+}
