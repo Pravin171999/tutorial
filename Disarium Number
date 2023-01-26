@@ -1,0 +1,40 @@
+e.g 
+num=175
+sum= 1+49+125
+num==sum
+
+import java.util.Scanner;
+class Disarium_Number 
+{
+	public static void main(String[] args) 
+	{   Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number");
+		int num=sc.nextInt();
+		int sum=0;
+		int count=0;
+		for(int j=num; j!=0 ; j/=10)
+		{
+			count++;
+		}
+		System.out.println(count);
+		for(int i=num; i!=0 ; i/=10)
+		{
+			int rem=i%10;
+			int pow=1;
+			for(int k=0; k<count; k++)
+			{
+			 pow=pow*rem;
+			}
+			count--;
+			sum=sum+pow;
+		}
+		if(num==sum)
+		{
+			System.out.print("It is Disarium Number");
+		}
+		else
+		{
+			System.out.print("It is Not Disarium Number");
+		}
+	}
+}
