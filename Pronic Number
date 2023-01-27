@@ -1,0 +1,51 @@
+num=6
+Product=2*3
+               6
+               /\
+             2  * 3
+             
+import java.util.Scanner;
+class Pronic_Number 
+{
+	public static void main(String[] args) 
+	{   Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number");
+		int num= sc.nextInt();
+	
+        
+
+		int n1=0;
+		int n2=1;
+		boolean b =false;
+        
+		
+		while(true)
+		{
+		int prod=n1*n2;
+		if(num==prod)
+		{
+		    b=true;
+			break;
+			
+		}
+		else if(prod>num)
+			{
+				break;
+			}
+		n1++;
+		n2++;
+		
+
+		}
+		if(b==true)
+		{
+			System.out.print("It is pronic Number");
+		}
+		else
+		{
+			System.out.print("It is not Pronic number");
+		}
+	}
+}
+
+              
