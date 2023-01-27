@@ -1,0 +1,46 @@
+num=13
+reverse=31
+So both are prime It is Twisted Prime Number
+
+import java.util.Scanner;
+class Twisted_Prime_Number 
+{
+	public static void main(String[] args) 
+	{   Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Number");
+		int num=sc.nextInt();
+             boolean c=false;
+			 boolean d=false;
+
+		for(int i=2; i<=num ; i++)
+		{
+			if(num%i==0)
+			{
+				c=true;
+				int rev=0;
+				for(int j=num; j!=0; j/=10)
+				{
+					int rem=j%10;
+					rev=rev*10+rem;
+				}
+				for(int k=2; k<=rev ; k++)
+				{
+					if(rev%k==0)
+					{
+						d=true;
+						
+					}
+				}
+				
+			}
+		}
+		if(c==true && d==true)
+		{
+			System.out.print("Twisted");
+		}
+		else
+		{
+			System.out.print("not");
+		}
+	}
+}
